@@ -1,0 +1,6 @@
+# Dependencias minimas del agente entregable (sin gym, nes-py ni SB3).
+# Probado con: torch 2.14.1, numpy 1.26.4, opencv-python-headless 4.11.0.86 (Python 3.10).
+# Los rangos se fijaran tras la prueba en otra computadora (Fase 8).
+torch
+numpy<2
+opencv-python-headless<5

@@ -13,6 +13,8 @@ from gym_super_mario_bros import SuperMarioBrosEnv
 from gym_super_mario_bros.actions import SIMPLE_MOVEMENT
 from nes_py.wrappers import JoypadSpace
 
+from .preprocess import preprocess_frame
+
 
 class LegacyNESToGymnasium(gym.Env):
     """Puente: adapta el entorno antiguo (API gym/nes-py) a la API de gymnasium.
@@ -95,9 +97,7 @@ class GrayResize(gym.ObservationWrapper):
         self.observation_space = spaces.Box(0, 255, (size, size, 1), np.uint8)
 
     def observation(self, obs):
-        gray = cv2.cvtColor(obs, cv2.COLOR_RGB2GRAY)
-        small = cv2.resize(gray, (self.size, self.size), interpolation=cv2.INTER_AREA)
-        return small[:, :, None]
+        return preprocess_frame(obs, self.size)[:, :, None]
 
 
 class FrameStack(gym.Wrapper):
