@@ -5,3 +5,7 @@ runs/
 # Nunca subir ROMs ni archivos del juego
 *.nes
 *.zip.bak
+# Checkpoints completos (pesados): solo se suben los finales elegidos a mano
+models/**/ckpt_*.zip
+models/speedtest*/
+results/videos/
