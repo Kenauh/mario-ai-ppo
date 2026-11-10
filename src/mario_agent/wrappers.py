@@ -126,3 +126,14 @@ class FrameStack(gym.Wrapper):
         obs, reward, terminated, truncated, info = self.env.step(action)
         self._buffer.append(obs)
         return self._stacked(), reward, terminated, truncated, info
+
+
+class RewardScale(gym.RewardWrapper):
+    """Multiplica la recompensa por una constante. SOLO entrenamiento (el agente no usa la recompensa)."""
+
+    def __init__(self, env, scale=1.0):
+        super().__init__(env)
+        self.scale = float(scale)
+
+    def reward(self, reward):
+        return reward * self.scale

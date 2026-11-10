@@ -1,0 +1,27 @@
+{
+  "name": "pilot_scale002",
+  "seed": 0,
+  "total_timesteps": 300000,
+  "n_envs": 8,
+  "checkpoint_every": 100000,
+  "env": {
+    "skip": 4,
+    "max_frames": 8000,
+    "size": 84,
+    "n_stack": 4
+  },
+  "ppo": {
+    "learning_rate": 0.00025,
+    "n_steps": 128,
+    "batch_size": 256,
+    "n_epochs": 4,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_range": 0.1,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5
+  },
+  "reward_scale": 0.02,
+  "eval_every": 25000
+}

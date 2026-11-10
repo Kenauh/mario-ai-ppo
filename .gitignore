@@ -9,3 +9,5 @@ runs/
 models/**/ckpt_*.zip
 models/speedtest*/
 results/videos/
+models/pilot*/
+models/smoke*/

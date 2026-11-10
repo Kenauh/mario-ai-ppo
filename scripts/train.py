@@ -25,13 +25,15 @@ from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.utils import set_random_seed
 from stable_baselines3.common.vec_env import SubprocVecEnv
 
-from mario_agent.callbacks import EpisodeLogger
+from mario_agent.callbacks import DetEvalCallback, EpisodeLogger
 from mario_agent.env_factory import make_mario_env
+from mario_agent.wrappers import RewardScale
 
 
-def make_train_env(**env_kw):
-    """Entorno de entrenamiento = entorno del agente + Monitor (solo para registrar)."""
-    return Monitor(make_mario_env(**env_kw))
+def make_train_env(reward_scale=1.0, **env_kw):
+    """Entorno del agente + Monitor (recompensa SIN escalar) + escala de recompensa (solo entrenamiento)."""
+    env = Monitor(make_mario_env(**env_kw))
+    return RewardScale(env, reward_scale) if reward_scale != 1.0 else env
 
 
 def latest_ckpt(models_dir):
@@ -76,7 +78,7 @@ def main():
         sys.exit("No hay checkpoints para reanudar.")
 
     set_random_seed(cfg["seed"])
-    venv = SubprocVecEnv([partial(make_train_env, **cfg["env"]) for _ in range(cfg["n_envs"])])
+    venv = SubprocVecEnv([partial(make_train_env, reward_scale=cfg.get("reward_scale", 1.0), **cfg["env"]) for _ in range(cfg["n_envs"])])
     venv.seed(cfg["seed"])
     tb_kw = dict(tensorboard_log=str(run_dir), device=args.device)
     if ckpt:
@@ -104,6 +106,7 @@ def main():
         CheckpointCallback(save_freq=max(cfg["checkpoint_every"] // cfg["n_envs"], 1),
                            save_path=str(models_dir), name_prefix="ckpt"),
         EpisodeLogger(run_dir),
+        DetEvalCallback(run_dir, models_dir, cfg["env"], cfg.get("eval_every", 100000)),
     ])
     t0 = time.time()
     try:
