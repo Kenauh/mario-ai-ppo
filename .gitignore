@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+runs/
+# Nunca subir ROMs ni archivos del juego
+*.nes
+*.zip.bak
