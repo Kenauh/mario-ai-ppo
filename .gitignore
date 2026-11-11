@@ -11,3 +11,6 @@ models/speedtest*/
 results/videos/
 models/pilot*/
 models/smoke*/
+
+models/cfg*/best*
+models/cfg*/final.zip
