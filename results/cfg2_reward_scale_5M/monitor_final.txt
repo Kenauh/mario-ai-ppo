@@ -1,0 +1,17 @@
+cfg2_reward_scale: 5000192 pasos | elapsed=100.8 min | fps=496 | episodios=24778
+Ultimos 100000 pasos: n=367 | max_x media=3046 mediana=3161 p90=3161 max=3161
+  causas: {'bandera': 347, 'muerte': 20} | banderas: 347
+  azar (50 episodios): media=861
+Evaluacion determinista (ultimas 6):
+ timesteps  det_max_x  det_frames det_cause  det_flag  new_best
+   4700896       3161        1091   bandera         1         0
+   4750896       3161        1080   bandera         1         0
+   4800896       3161        1080   bandera         1         0
+   4850896       3161        1080   bandera         1         0
+   4900896       3161        1087   bandera         1         0
+   4950896       3161        1080   bandera         1         0
+--- Puerta de decision a 1000000 pasos ---
+Evaluacion determinista mas cercana: 1000000 pasos, det_max_x=594
+Criterio 1: media max_x en (900000, 1000000] n=816: 955 (umbral >= 1000) -> False
+Criterio 2: det_max_x=594 (umbral > 700) -> False
+VEREDICTO: INTERRUMPIR y pasar al plan B

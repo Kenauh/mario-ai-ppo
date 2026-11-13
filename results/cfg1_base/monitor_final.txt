@@ -1,0 +1,17 @@
+cfg1_base: 5000256 pasos | elapsed=74.2 min | fps=539 | episodios=70955
+Ultimos 100000 pasos: n=3332 | max_x media=314 mediana=314 p90=314 max=314
+  causas: {'muerte': 3332} | banderas: 0
+  azar (50 episodios): media=861
+Evaluacion determinista (ultimas 6):
+ timesteps  det_max_x  det_frames det_cause  det_flag  new_best
+   4750000        314         120    muerte         0         0
+   4800000        314         120    muerte         0         0
+   4850000        314         120    muerte         0         0
+   4900000        314         120    muerte         0         0
+   4950000        314         120    muerte         0         0
+   5000000        314         120    muerte         0         0
+--- Puerta de decision a 1000000 pasos ---
+Evaluacion determinista mas cercana: 1000000 pasos, det_max_x=709
+Criterio 1: media max_x en (900000, 1000000] n=170: 625 (umbral >= 1000) -> False
+Criterio 2: det_max_x=709 (umbral > 700) -> True
+VEREDICTO: CONTINUAR
