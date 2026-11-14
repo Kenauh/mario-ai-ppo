@@ -1,0 +1,1 @@
+La primera ejecucion de run_select.sh evaluo por error ckpt_300000 y ckpt_400000 (patron de busqueda defectuoso, corregido). Los CSV sel_cfg2_3000k y sel_cfg2_4000k son de la reejecucion correcta (ckpt_3000896 y ckpt_4000896).

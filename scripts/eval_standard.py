@@ -63,6 +63,7 @@ def main():
     ap.add_argument("--mode", choices=["stoch", "det"], required=True)
     ap.add_argument("--episodes", type=int, default=100)
     ap.add_argument("--noop-max", type=int, default=0)
+    ap.add_argument("--seed-start", type=int, default=0)
     ap.add_argument("--max-frames", type=int, default=8000)
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
@@ -72,7 +73,7 @@ def main():
     env = make_mario_env(max_frames=a.max_frames)
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     t0, rows = time.time(), []
-    for seed in range(a.episodes):
+    for seed in range(a.seed_start, a.seed_start + a.episodes):
         r = run_episode(env, model, a.mode, seed, a.noop_max)
         r.update(label=a.label, ckpt=Path(a.ckpt).name, mode=a.mode)
         rows.append(r)
