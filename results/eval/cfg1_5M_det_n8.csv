@@ -1,0 +1,10 @@
+label,ckpt,mode,seed,k_noop,max_x,norm,flag,cause,decisions,frames,frames_info
+cfg1_5M,ckpt_5000256_steps.zip,det,0,0,314,0.0993,0,muerte,30,120,120
+cfg1_5M,ckpt_5000256_steps.zip,det,1,1,314,0.0993,0,muerte,31,124,124
+cfg1_5M,ckpt_5000256_steps.zip,det,2,2,314,0.0993,0,muerte,32,128,128
+cfg1_5M,ckpt_5000256_steps.zip,det,3,3,314,0.0993,0,muerte,33,132,132
+cfg1_5M,ckpt_5000256_steps.zip,det,4,4,314,0.0993,0,muerte,34,136,136
+cfg1_5M,ckpt_5000256_steps.zip,det,5,5,314,0.0993,0,muerte,35,140,140
+cfg1_5M,ckpt_5000256_steps.zip,det,6,6,314,0.0993,0,muerte,36,144,144
+cfg1_5M,ckpt_5000256_steps.zip,det,7,7,314,0.0993,0,muerte,37,148,148
+cfg1_5M,ckpt_5000256_steps.zip,det,8,8,314,0.0993,0,muerte,38,152,152

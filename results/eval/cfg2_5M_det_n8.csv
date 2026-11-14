@@ -1,0 +1,10 @@
+label,ckpt,mode,seed,k_noop,max_x,norm,flag,cause,decisions,frames,frames_info
+cfg2_5M,ckpt_5000192_steps.zip,det,0,0,3161,1.0,1,bandera,270,1080,1080
+cfg2_5M,ckpt_5000192_steps.zip,det,1,1,3161,1.0,1,bandera,271,1084,1084
+cfg2_5M,ckpt_5000192_steps.zip,det,2,2,3161,1.0,1,bandera,272,1088,1088
+cfg2_5M,ckpt_5000192_steps.zip,det,3,3,3161,1.0,1,bandera,273,1092,1092
+cfg2_5M,ckpt_5000192_steps.zip,det,4,4,3161,1.0,1,bandera,274,1096,1096
+cfg2_5M,ckpt_5000192_steps.zip,det,5,5,3161,1.0,1,bandera,275,1100,1100
+cfg2_5M,ckpt_5000192_steps.zip,det,6,6,3161,1.0,1,bandera,276,1104,1104
+cfg2_5M,ckpt_5000192_steps.zip,det,7,7,3161,1.0,1,bandera,277,1108,1108
+cfg2_5M,ckpt_5000192_steps.zip,det,8,8,315,0.0997,0,muerte,35,140,138

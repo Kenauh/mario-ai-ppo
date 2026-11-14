@@ -1,0 +1,10 @@
+label,ckpt,mode,seed,k_noop,max_x,norm,flag,cause,decisions,frames,frames_info
+cfg2_2M,ckpt_2000000_steps.zip,det,0,0,434,0.1373,0,limite_fotogramas,2000,8000,8000
+cfg2_2M,ckpt_2000000_steps.zip,det,1,1,434,0.1373,0,limite_fotogramas,2000,8000,8000
+cfg2_2M,ckpt_2000000_steps.zip,det,2,2,2226,0.7042,0,limite_fotogramas,2000,8000,8000
+cfg2_2M,ckpt_2000000_steps.zip,det,3,3,2227,0.7045,0,limite_fotogramas,2000,8000,8000
+cfg2_2M,ckpt_2000000_steps.zip,det,4,4,434,0.1373,0,limite_fotogramas,2000,8000,8000
+cfg2_2M,ckpt_2000000_steps.zip,det,5,5,434,0.1373,0,limite_fotogramas,2000,8000,8000
+cfg2_2M,ckpt_2000000_steps.zip,det,6,6,594,0.1879,0,limite_fotogramas,2000,8000,8000
+cfg2_2M,ckpt_2000000_steps.zip,det,7,7,594,0.1879,0,limite_fotogramas,2000,8000,8000
+cfg2_2M,ckpt_2000000_steps.zip,det,8,8,594,0.1879,0,limite_fotogramas,2000,8000,8000

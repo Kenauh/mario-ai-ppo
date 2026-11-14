@@ -1,0 +1,48 @@
+[cfg1_2M stoch noop<=0] n=100 banderas=0 tasa=0.000 IC95=[0.000, 0.037]
+  progreso norm media=0.210 | max_x mediana=722 | frames exito: sin exitos
+  causas={'muerte': 69, 'limite_fotogramas': 31} | 481 s | results/eval/cfg1_2M_stoch_n0.csv
+[cfg1_2M det noop<=0] n=1 banderas=0 tasa=0.000 IC95=[0.000, 0.793]
+  progreso norm media=0.138 | max_x mediana=437 | frames exito: sin exitos
+  causas={'limite_fotogramas': 1} | 13 s | results/eval/cfg1_2M_det_n0.csv
+[cfg1_2M stoch noop<=8] n=100 banderas=0 tasa=0.000 IC95=[0.000, 0.037]
+  progreso norm media=0.212 | max_x mediana=716 | frames exito: sin exitos
+  causas={'muerte': 69, 'limite_fotogramas': 31} | 484 s | results/eval/cfg1_2M_stoch_n8.csv
+[cfg1_2M det noop<=8] n=9 banderas=0 tasa=0.000 IC95=[0.000, 0.299]
+  progreso norm media=0.138 | max_x mediana=435 | frames exito: sin exitos
+  causas={'limite_fotogramas': 9} | 117 s | results/eval/cfg1_2M_det_n8.csv
+[cfg2_2M stoch noop<=0] n=100 banderas=16 tasa=0.160 IC95=[0.101, 0.244]
+  progreso norm media=0.634 | max_x mediana=1956 | frames exito: media=1568 mediana=1588 min=1352
+  causas={'bandera': 16, 'muerte': 84} | 154 s | results/eval/cfg2_2M_stoch_n0.csv
+[cfg2_2M det noop<=0] n=1 banderas=0 tasa=0.000 IC95=[0.000, 0.793]
+  progreso norm media=0.137 | max_x mediana=434 | frames exito: sin exitos
+  causas={'limite_fotogramas': 1} | 13 s | results/eval/cfg2_2M_det_n0.csv
+[cfg2_2M stoch noop<=8] n=100 banderas=18 tasa=0.180 IC95=[0.117, 0.267]
+  progreso norm media=0.669 | max_x mediana=1998 | frames exito: media=1652 mediana=1600 min=1360
+  causas={'bandera': 18, 'muerte': 82} | 169 s | results/eval/cfg2_2M_stoch_n8.csv
+[cfg2_2M det noop<=8] n=9 banderas=0 tasa=0.000 IC95=[0.000, 0.299]
+  progreso norm media=0.280 | max_x mediana=594 | frames exito: sin exitos
+  causas={'limite_fotogramas': 9} | 118 s | results/eval/cfg2_2M_det_n8.csv
+[cfg1_5M stoch noop<=0] n=100 banderas=0 tasa=0.000 IC95=[0.000, 0.037]
+  progreso norm media=0.099 | max_x mediana=314 | frames exito: sin exitos
+  causas={'muerte': 100} | 20 s | results/eval/cfg1_5M_stoch_n0.csv
+[cfg1_5M det noop<=0] n=1 banderas=0 tasa=0.000 IC95=[0.000, 0.793]
+  progreso norm media=0.099 | max_x mediana=314 | frames exito: sin exitos
+  causas={'muerte': 1} | 0 s | results/eval/cfg1_5M_det_n0.csv
+[cfg1_5M stoch noop<=8] n=100 banderas=0 tasa=0.000 IC95=[0.000, 0.037]
+  progreso norm media=0.099 | max_x mediana=314 | frames exito: sin exitos
+  causas={'muerte': 100} | 22 s | results/eval/cfg1_5M_stoch_n8.csv
+[cfg1_5M det noop<=8] n=9 banderas=0 tasa=0.000 IC95=[0.000, 0.299]
+  progreso norm media=0.099 | max_x mediana=314 | frames exito: sin exitos
+  causas={'muerte': 9} | 2 s | results/eval/cfg1_5M_det_n8.csv
+[cfg2_5M stoch noop<=0] n=100 banderas=93 tasa=0.930 IC95=[0.863, 0.966]
+  progreso norm media=0.963 | max_x mediana=3161 | frames exito: media=1120 mediana=1084 min=1080
+  causas={'bandera': 93, 'muerte': 7} | 181 s | results/eval/cfg2_5M_stoch_n0.csv
+[cfg2_5M det noop<=0] n=1 banderas=1 tasa=1.000 IC95=[0.207, 1.000]
+  progreso norm media=1.000 | max_x mediana=3161 | frames exito: media=1080 mediana=1080 min=1080
+  causas={'bandera': 1} | 2 s | results/eval/cfg2_5M_det_n0.csv
+[cfg2_5M stoch noop<=8] n=100 banderas=84 tasa=0.840 IC95=[0.756, 0.899]
+  progreso norm media=0.899 | max_x mediana=3161 | frames exito: media=1129 mediana=1108 min=1080
+  causas={'bandera': 84, 'muerte': 16} | 170 s | results/eval/cfg2_5M_stoch_n8.csv
+[cfg2_5M det noop<=8] n=9 banderas=8 tasa=0.889 IC95=[0.565, 0.980]
+  progreso norm media=0.900 | max_x mediana=3161 | frames exito: media=1094 mediana=1094 min=1080
+  causas={'bandera': 8, 'muerte': 1} | 15 s | results/eval/cfg2_5M_det_n8.csv

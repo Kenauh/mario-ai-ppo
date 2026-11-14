@@ -1,0 +1,2 @@
+label,ckpt,mode,seed,k_noop,max_x,norm,flag,cause,decisions,frames,frames_info
+cfg2_5M,ckpt_5000192_steps.zip,det,0,0,3161,1.0,1,bandera,270,1080,1080

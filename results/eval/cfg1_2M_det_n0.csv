@@ -1,0 +1,2 @@
+label,ckpt,mode,seed,k_noop,max_x,norm,flag,cause,decisions,frames,frames_info
+cfg1_2M,ckpt_2000000_steps.zip,det,0,0,437,0.1382,0,limite_fotogramas,2000,8000,8000

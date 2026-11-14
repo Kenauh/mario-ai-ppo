@@ -1,0 +1,2 @@
+label,ckpt,mode,seed,k_noop,max_x,norm,flag,cause,decisions,frames,frames_info
+cfg1_5M,ckpt_5000256_steps.zip,det,0,0,314,0.0993,0,muerte,30,120,120
