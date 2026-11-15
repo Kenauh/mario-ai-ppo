@@ -60,6 +60,7 @@ def main():
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--max-frames", type=int, default=8000)
     ap.add_argument("--scale", type=int, default=2)
+    ap.add_argument("--noop-k", type=int, default=0, help="decisiones NOOP iniciales (4 fotogramas cada una)")
     args = ap.parse_args()
 
     ckpt = Path(args.ckpt) if args.ckpt else latest_ckpt(ROOT / "models" / args.name)
@@ -80,7 +81,7 @@ def main():
     agent.reset()
     out_dir = ROOT / "results" / "videos"
     out_dir.mkdir(parents=True, exist_ok=True)
-    tag = "stoch" if args.stochastic else "det"
+    tag = ("stoch" if args.stochastic else "det") + (f"_k{args.noop_k}" if args.noop_k else "")
     h, w = obs.shape[:2]
     writer, vpath = open_writer(out_dir / f"{args.name}_{steps}_{tag}_s{args.seed}.mp4",
                                 (w * args.scale, h * args.scale))
@@ -88,7 +89,9 @@ def main():
     frames, max_x, cause, info = 0, 0, "limite_fotogramas", {}
     t0 = time.time()
     while frames < args.max_frames:
-        action = agent.act(obs)                      # un fotograma crudo por llamada
+        action = agent.act(obs)  # un fotograma crudo por llamada
+        if frames < 4 * args.noop_k:
+            action = 0  # espera inicial: NOOP; el agente igual recibe los fotogramas
         obs, _, done, _, info = env.step(action)
         frames += 1
         max_x = max(max_x, int(info.get("x_pos", 0)))
