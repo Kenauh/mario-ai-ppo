@@ -16,3 +16,4 @@ models/cfg*/best*
 models/cfg*/final.zip
 
 models/**/policy_*.pt
+fixture/
