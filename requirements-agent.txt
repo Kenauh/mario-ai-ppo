@@ -1,6 +1,8 @@
 # Dependencias minimas del agente entregable (sin gym, nes-py ni SB3).
-# Probado con: torch 2.14.1, numpy 1.26.4, opencv-python-headless 4.11.0.86 (Python 3.10).
-# Los rangos se fijaran tras la prueba en otra computadora (Fase 8).
+# Los limites numpy<2 y opencv<5 son del ENTRENAMIENTO (nes-py), no del agente: ver requirements.txt.
+# Verificado con una grabacion de 600 fotogramas (0 acciones distintas de 600):
+#   Linux/WSL:     Python 3.10.12, torch 2.14.1+cu130, numpy 1.26.4, opencv-python-headless 4.11.0.86
+#   Windows (CPU): Python 3.14.10, torch 2.15.0+cpu,   numpy 2.5.5,   opencv-python-headless 5.1.0.95
 torch
-numpy<2
-opencv-python-headless<5
+numpy
+opencv-python-headless
