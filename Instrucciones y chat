@@ -1,0 +1,599 @@
+🎯 Objetivo
+Diseñar, implementar y evaluar un agente inteligente autónomo capaz de jugar el primer nivel (Mundo 1-1) de Super Mario Bros., utilizando una estrategia de inteligencia artificial seleccionada y justificada por el equipo.
+
+El proyecto tiene como propósito que los estudiantes apliquen sus conocimientos de algoritmos de búsqueda, planificación, sistemas basados en conocimiento, aprendizaje automático, aprendizaje por refuerzo, algoritmos evolutivos u otros métodos de inteligencia artificial para resolver un problema dinámico de toma de decisiones.
+
+Cada equipo deberá desarrollar un agente capaz de interpretar información del entorno, seleccionar acciones y enfrentar los desafíos del nivel sin intervención humana durante su ejecución.
+
+Como parte del proyecto, los agentes participarán en el Mario AI Challenge, una competencia experimental en la cual su desempeño será comparado con el de otros equipos y con un agente de referencia entrenado previamente por el docente.
+
+El objetivo académico no será únicamente superar al agente docente, sino demostrar la capacidad de diseñar una solución inteligente, analizar su comportamiento y justificar experimentalmente sus resultados.
+
+
+📖 Descripción del problema
+Los videojuegos representan entornos útiles para estudiar problemas de inteligencia artificial, ya que requieren observar situaciones cambiantes, tomar decisiones y ejecutar acciones para alcanzar determinados objetivos.
+
+En particular, los videojuegos de plataformas presentan desafíos relacionados con navegación, evasión de obstáculos, coordinación temporal, predicción de movimientos y planificación de acciones.
+
+En Super Mario Bros., un jugador debe avanzar por un escenario mientras evita enemigos, supera obstáculos y alcanza una meta antes de agotar sus recursos disponibles.
+
+Aunque estas acciones pueden parecer sencillas para una persona, automatizarlas representa un problema computacional que involucra percepción, razonamiento y toma de decisiones.
+
+
+2.1. El desafío
+Cada equipo deberá desarrollar un agente inteligente capaz de jugar de manera autónoma el primer nivel de Super Mario Bros. (Mundo 1-1).
+
+El agente deberá:
+1. Obtener información del estado actual del videojuego.
+2. Procesar e interpretar dicha información.
+3. Determinar una acción utilizando una estrategia de inteligencia artificial.
+4. Ejecutar la acción en el entorno.
+5. Observar las consecuencias de sus decisiones.
+6. Continuar jugando hasta completar el nivel, perder o alcanzar el límite de ejecución establecido.
+
+El objetivo principal será alcanzar la bandera final del nivel.
+
+Los estudiantes deberán investigar y seleccionar una estrategia que consideren adecuada para resolver el problema.
+
+No existe un algoritmo obligatorio ni una única solución correcta.
+
+Cada equipo será responsable de justificar sus decisiones técnicas y demostrar el funcionamiento de su agente.
+
+2.2. Competencia contra el agente docente
+Al finalizar el periodo de desarrollo, cada agente participará en una competencia de desempeño.
+
+En ella se compararán los resultados obtenidos por los equipos con un agente docente de referencia desarrollado previamente mediante técnicas de aprendizaje por refuerzo profundo (DQN/Double DQN).
+
+La competencia se realizará utilizando condiciones de evaluación equivalentes, con métricas comunes y sin intervención humana.
+
+Importante: superar al agente docente no será una condición obligatoria para obtener una calificación aprobatoria o incluso la máxima calificación académica.
+
+La competencia servirá como un mecanismo para analizar y comparar las capacidades de las distintas estrategias implementadas.
+
+
+⚙️ Requerimientos del proyecto
+ 3.1. Análisis y formalización del problema
+
+Cada equipo deberá estudiar el entorno del videojuego y formalizar el problema que resolverá su agente.
+
+Como mínimo, deberá identificar y describir:
+1. Objetivo del agente.
+2. Información observable del entorno.
+3. Representación del estado.
+4. Acciones disponibles.
+5. Obstáculos y situaciones de riesgo.
+6. Condiciones de éxito y fracaso.
+7. Criterios para seleccionar acciones.
+8. Limitaciones del método elegido.
+
+El equipo deberá explicar cómo su estrategia utiliza las observaciones disponibles para tomar decisiones.
+
+Cuando corresponda, podrá formular el problema mediante estados, acciones, funciones de transición, recompensas, heurísticas, reglas, políticas o funciones de aptitud.
+
+La formalización deberá ser coherente con la estrategia seleccionada.
+
+
+
+3.2. Selección de la estrategia de inteligencia artificial
+Los estudiantes tendrán libertad para implementar cualquier estrategia de inteligencia artificial que consideren apropiada.
+
+Entre las alternativas se encuentran:
+
+A. Algoritmos de búsqueda y planificación
+- Búsqueda heurística.
+- A*.
+- Búsqueda en árboles.
+- Monte Carlo Tree Search (MCTS).
+- Planificación basada en estados.
+- Otros algoritmos de búsqueda.
+
+
+B. Aprendizaje por refuerzo
+- Q-Learning.
+- SARSA.
+- Deep Q-Network (DQN).
+- Double DQN.
+- Proximal Policy Optimization (PPO).
+- Actor-Critic.
+- Otros algoritmos de aprendizaje por refuerzo.
+
+
+C. Algoritmos evolutivos
+- Algoritmos genéticos.
+- Estrategias evolutivas.
+- Neuroevolución.
+- NEAT.
+- Otros mecanismos de optimización evolutiva.
+
+
+D. Sistemas basados en conocimiento
+- Sistemas basados en reglas.
+- Máquinas de estados.
+- Sistemas expertos.
+- Estrategias reactivas.
+- Sistemas de decisión heurística.
+
+
+E. Aprendizaje supervisado
+- Aprendizaje por imitación.
+- Clasificación de acciones.
+- Predicción de decisiones mediante redes neuronales.
+- Otros métodos supervisados aplicables.
+
+
+F. Estrategias híbridas
+Se permitirá combinar dos o más técnicas para desarrollar una solución.
+
+También podrán utilizarse enfoques distintos de los mencionados, siempre que el equipo justifique su pertinencia.
+
+Sin embargo, la solución deberá presentar un fundamento identificable de inteligencia artificial y demostrar un mecanismo autónomo de selección de acciones.
+
+
+3.3. Entorno de desarrollo
+Los equipos podrán seleccionar libremente el entorno, emulador o herramienta de desarrollo.
+
+Se recomienda investigar alternativas como `gym-super-mario-bros`, Gym Retro, Stable-Retro u otras plataformas compatibles.
+
+Se permitirá utilizar:
+- Python u otros lenguajes de programación.
+- Bibliotecas de aprendizaje automático y aprendizaje por refuerzo.
+- Herramientas de búsqueda y optimización.
+- Frameworks de redes neuronales.
+- Google Colab.
+- Computadoras personales.
+- Recursos de cómputo disponibles para los integrantes.
+
+Cada equipo deberá documentar su entorno de desarrollo, incluyendo versiones, bibliotecas, configuración e instrucciones de ejecución.
+
+La libertad del entorno de entrenamiento no elimina la obligación de cumplir el protocolo común de evaluación.
+
+Los equipos deberán garantizar que su agente final pueda evaluarse mediante el procedimiento oficial proporcionado por el docente.
+
+
+3.4. Representación del entorno y selección de acciones
+Cada equipo deberá implementar un mecanismo para obtener y procesar la información necesaria para tomar decisiones.
+
+Según la estrategia seleccionada, se podrán utilizar:
+- Imágenes del videojuego.
+- Fotogramas consecutivos.
+- Representaciones discretas del escenario.
+- Características obtenidas mediante procesamiento visual.
+- Variables observables del entorno.
+- Información derivada de estados anteriores.
+- Mapas, heurísticas o representaciones internas.
+
+El equipo deberá explicar qué información utiliza su agente y cómo la obtiene.
+
+Se permitirá utilizar mecanismos propios de representación del estado, siempre que no se vulnere el protocolo de competencia.
+
+El agente deberá producir acciones válidas que puedan ejecutarse sobre el videojuego.
+
+Se permitirá utilizar adaptadores para transformar las acciones internas del agente a los controles permitidos por el evaluador.
+
+
+3.5. Implementación del agente inteligente
+El equipo deberá construir un sistema capaz de interactuar autónomamente con el videojuego.
+
+El agente deberá:
+1. Recibir información del entorno.
+2. Mantener el estado interno necesario para su funcionamiento.
+3. Procesar la información utilizando la estrategia seleccionada.
+4. Determinar una acción.
+5. Ejecutar dicha acción.
+6. Continuar funcionando sin intervención humana.
+7. Identificar o reaccionar ante condiciones de terminación.
+
+La implementación deberá corresponder con el modelo teórico explicado en la documentación.
+
+No será suficiente reproducir una secuencia fija de botones, cargar una grabación previamente realizada o controlar directamente al personaje durante la evaluación.
+
+Se permitirán reglas, secuencias de acciones y trayectorias como componentes de una estrategia, siempre que formen parte de un sistema de decisión autónomo y no sustituyan por completo dicho proceso.
+
+
+3.6. Desarrollo y mejora de la estrategia
+Cada equipo deberá implementar y documentar un procedimiento para desarrollar, ajustar o mejorar su agente.
+
+Este procedimiento dependerá del enfoque elegido.
+
+Para agentes basados en aprendizaje por refuerzo:
+- Definir recompensas y penalizaciones.
+- Seleccionar hiperparámetros.
+- Entrenar la política.
+- Registrar episodios, recompensas y progreso.
+- Analizar la evolución del aprendizaje.
+
+Para agentes basados en búsqueda o planificación:
+- Diseñar la representación de estados.
+- Definir heurísticas o criterios de exploración.
+- Analizar el costo computacional.
+- Evaluar alternativas de planificación.
+- Documentar situaciones en las cuales el agente falla.
+
+Para agentes evolutivos:
+- Definir la representación de los individuos.
+- Diseñar una función de aptitud.
+- Implementar operadores de evolución.
+- Registrar generaciones y resultados.
+- Analizar el proceso de optimización.
+
+Para agentes basados en reglas:
+- Diseñar una base de reglas o una máquina de estados.
+- Definir condiciones de activación.
+- Resolver conflictos entre decisiones.
+- Analizar el comportamiento ante diferentes situaciones.
+- Ajustar y comparar configuraciones del sistema.
+
+En todos los casos deberán presentar evidencia del proceso de desarrollo.
+
+
+3.7. Experimentación comparativa
+Cada equipo deberá evaluar al menos dos configuraciones de su estrategia.
+
+Las configuraciones podrán diferir en:
+- Algoritmo utilizado.
+- Arquitectura.
+- Hiperparámetros.
+- Función de recompensa.
+- Función de aptitud.
+- Heurísticas.
+- Representación del estado.
+- Reglas de decisión.
+- Estrategia de exploración.
+- Otro componente técnicamente justificado.
+
+Se requiere:
+1. Establecer una configuración inicial.
+2. Desarrollar una segunda configuración.
+3. Identificar claramente la diferencia entre ambas.
+4. Ejecutar pruebas bajo condiciones comparables.
+5. Registrar métricas.
+6. Analizar los resultados.
+7. Seleccionar y justificar la configuración final.
+
+Las modificaciones deberán responder a una hipótesis o decisión técnica explicable.
+
+No se considerará suficiente presentar dos configuraciones sin analizar sus diferencias.
+
+
+3.8. Evaluación del agente
+El equipo deberá establecer un procedimiento experimental que permita analizar el comportamiento de su agente.
+
+Como mínimo, deberá registrar:
+1. Porcentaje de ejecuciones que completan el nivel.
+2. Máximo progreso horizontal alcanzado.
+3. Número de episodios o intentos ejecutados.
+4. Duración de las ejecuciones medida en fotogramas o pasos equivalentes.
+5. Situaciones que provocan fallos.
+6. Resultados comparativos de las dos configuraciones.
+
+Además, deberán presentar las métricas específicas correspondientes al método elegido.
+
+Por ejemplo:
+- Recompensa acumulada para aprendizaje por refuerzo.
+- Número de estados explorados para búsqueda.
+- Evolución de aptitud para algoritmos genéticos.
+- Frecuencia de activación de reglas y fallos para sistemas expertos.
+
+Los resultados deberán analizarse y no limitarse a presentar gráficas o tablas.
+
+
+3.9. Ejecución autónoma
+El agente final deberá ser capaz de ejecutar el videojuego sin intervención humana.
+
+Durante la evaluación:
+- No se permitirá controlar manualmente al personaje.
+- No se permitirá modificar la política durante el intento.
+- No se permitirá consultar un servicio externo que resuelva las acciones.
+- No se permitirá alterar artificialmente el estado del videojuego.
+- No se permitirá modificar las métricas del evaluador.
+- El agente deberá actuar utilizando su estrategia implementada.
+
+Se permitirán procesos de inicialización, carga de modelos, preparación de memoria o configuración que sean necesarios para ejecutar el agente.
+
+
+3.10. Compatibilidad con la competencia
+Cada equipo deberá proporcionar un mecanismo para ejecutar su agente mediante el evaluador docente.
+
+Se establecerá una interfaz común que permita:
+1. Inicializar el agente.
+2. Reiniciar su estado interno.
+3. Recibir observaciones del videojuego.
+4. Obtener una acción válida.
+5. Finalizar correctamente una ejecución.
+
+El protocolo de evaluación utilizará un mismo escenario y reglas equivalentes.
+
+Los equipos deberán adaptar sus soluciones al entorno competitivo sin modificar indebidamente el comportamiento del evaluador.
+
+La versión definitiva del entorno, límites de ejecución, controles y formato de entrega del agente se especificarán en un anexo técnico proporcionado por el docente.
+
+
+🏆 Mario AI Challenge
+La competencia tendrá como propósito comparar experimentalmente los resultados de diferentes enfoques de inteligencia artificial.
+
+4.1. Condiciones generales
+1. Todos los agentes competirán en el primer nivel de Super Mario Bros. (Mundo 1-1).
+2. Cada agente jugará de manera independiente.
+3. Las ejecuciones utilizarán condiciones iniciales equivalentes.
+4. Se establecerá un límite común de fotogramas por intento.
+5. Las políticas deberán funcionar sin intervención humana.
+6. Se utilizarán las mismas reglas de terminación y obtención de métricas.
+7. Las recompensas internas de entrenamiento no modificarán la puntuación competitiva.
+8. El evaluador registrará automáticamente los resultados.
+
+
+4.2. Métricas de competencia
+Tasa de finalización: proporción de ejecuciones en las que el agente alcanza correctamente la meta.
+Progreso máximo: mayor posición horizontal alcanzada, normalizada respecto al punto final del escenario.
+Eficiencia temporal: cantidad de fotogramas utilizados para completar el nivel, favoreciendo las ejecuciones exitosas que requieren menos tiempo.
+
+La fórmula exacta de normalización, el número de intentos y el límite de fotogramas serán establecidos en el protocolo técnico antes de la competencia.
+
+La evaluación se realizará con la misma función de puntuación para todos los participantes.
+
+
+4.3. Agente de referencia
+El docente proporcionará los resultados de un agente desarrollado mediante aprendizaje por refuerzo profundo.
+
+Los equipos podrán comparar su desempeño con dicho agente y analizar las fortalezas y limitaciones de sus estrategias.
+
+No será obligatorio utilizar la misma arquitectura, algoritmo ni representación de estados del agente docente.
+
+
+4.4. Clasificación competitiva
+Se elaborará una clasificación de desempeño basada exclusivamente en las métricas oficiales.
+
+La clasificación será independiente de la rúbrica académica.
+
+Un equipo podrá obtener la máxima calificación del proyecto aunque su agente no complete el nivel o no supere al agente docente, siempre que cumpla satisfactoriamente los criterios académicos establecidos.
+
+
+🔍 Alcance del proyecto
+El proyecto deberá producir un agente de inteligencia artificial funcional capaz de interactuar de manera autónoma con el primer nivel de Super Mario Bros.
+
+Dentro del alcance:
+- Estudio y formalización del problema.
+- Selección justificada de una estrategia de IA.
+- Diseño de estados, observaciones y acciones.
+- Implementación del agente.
+- Desarrollo, ajuste o entrenamiento de la estrategia.
+- Comparación de dos configuraciones.
+- Análisis experimental.
+- Ejecución autónoma.
+- Compatibilidad con el evaluador.
+- Participación en el Mario AI Challenge.
+
+Fuera del alcance obligatorio:
+- Completar todos los niveles del videojuego.
+- Entrenar necesariamente una red neuronal.
+- Implementar exclusivamente aprendizaje por refuerzo.
+- Superar obligatoriamente al agente docente.
+- Desarrollar un emulador desde cero.
+- Crear una interfaz gráfica independiente.
+- Desarrollar una solución comercial.
+- Garantizar que el agente nunca cometa errores.
+
+Se valorará la calidad del diseño, la implementación y el análisis experimental, independientemente de la técnica elegida.
+
+
+📦 Entregables
+6.1. Repositorio de código fuente
+Cada equipo deberá entregar un repositorio GitHub que contenga:
+- Código fuente completo.
+- Implementación del agente.
+- Algoritmos y componentes desarrollados.
+- Archivos de configuración.
+- Dependencias.
+- Instrucciones de instalación.
+- Instrucciones de ejecución.
+- Resultados experimentales.
+- Documentación del entorno utilizado.
+
+Cuando corresponda, deberán incluir los modelos entrenados, checkpoints, configuraciones de entrenamiento o archivos necesarios para reproducir la solución.
+
+
+6.2. Notebook de experimentación
+Un notebook de Python compatible con Jupyter o Google Colab, o un conjunto equivalente de scripts reproducibles cuando el método no utilice Python.
+
+Deberá documentar:
+1. Representación del problema.
+2. Estrategia seleccionada.
+3. Configuración inicial.
+4. Procedimiento de entrenamiento, optimización o ajuste.
+5. Segunda configuración experimental.
+6. Resultados de ambas configuraciones.
+7. Gráficas o tablas comparativas.
+8. Análisis de errores.
+9. Selección del agente final.
+
+No será obligatorio que los experimentos completos puedan repetirse instantáneamente, pero deberán proporcionarse las instrucciones y recursos necesarios para reproducirlos.
+
+
+6.3. Agente ejecutable
+Entregar la política final junto con los archivos necesarios para ejecutarla.
+
+El agente deberá:
+- Cargarse correctamente.
+- Recibir observaciones.
+- Devolver acciones válidas.
+- Mantener su estado interno cuando sea necesario.
+- Ejecutarse sin intervención humana.
+- Integrarse con el protocolo docente.
+
+
+6.4. Reporte técnico
+Un documento PDF de máximo 10 cuartillas de contenido principal, que incluya:
+1. Introducción y planteamiento del problema.
+2. Objetivo y alcance.
+3. Formalización del problema.
+4. Estrategia de inteligencia artificial seleccionada.
+5. Arquitectura del agente.
+6. Procedimiento de desarrollo, entrenamiento u optimización.
+7. Diseño experimental.
+8. Resultados y comparación de configuraciones.
+9. Análisis de errores y limitaciones.
+10. Conclusiones y posibles mejoras.
+
+La portada, referencias y anexos no contarán dentro del límite.
+
+
+6.5. Demostración en vivo
+Cada equipo deberá presentar su agente funcionando en el primer nivel de Super Mario Bros.
+
+Durante la presentación se verificará:
+1. Inicialización correcta del agente.
+2. Ejecución autónoma.
+3. Selección de acciones mediante la estrategia implementada.
+4. Registro de progreso.
+5. Integración con el evaluador.
+6. Resultados de desempeño.
+7. Explicación de decisiones técnicas.
+
+Todos los integrantes deberán conocer el funcionamiento general de su solución y ser capaces de explicar su contribución.
+
+
+⚠️ Limitaciones y precauciones
+1. Autonomía obligatoria: el agente deberá actuar sin control humano durante la evaluación.
+2. Libertad de estrategia: no existirá un algoritmo obligatorio, pero todas las soluciones deberán presentar fundamentos de inteligencia artificial identificables y justificables.
+3. Prohibición de automatizaciones triviales: no se aceptará una grabación, reproducción fija de botones o secuencia rígida que sustituya completamente la toma de decisiones.
+4. Integridad del entorno: no se permitirá modificar RAM, posiciones, condiciones de victoria, temporizadores o variables internas para obtener ventajas artificiales.
+5. Compatibilidad: todos los equipos deberán cumplir el protocolo técnico oficial de competencia, aun cuando utilicen diferentes entornos durante su desarrollo.
+6. Reproducibilidad: deberán documentarse versiones, bibliotecas, configuraciones y recursos necesarios.
+7. Experimentación obligatoria: se deberán comparar al menos dos configuraciones de la estrategia implementada.
+8. Resultados verificables: las métricas deberán obtenerse de ejecuciones reales del agente.
+9. Recursos computacionales: se permitirá utilizar Google Colab o equipos propios, pero deberá documentarse el tiempo y los recursos utilizados.
+10. Originalidad: se podrán utilizar bibliotecas y algoritmos existentes, pero el equipo deberá desarrollar, integrar, modificar o configurar sustancialmente su solución y explicar todas sus decisiones.
+11. Uso de herramientas generativas: se permitirá su utilización como apoyo, pero los integrantes serán responsables de comprender, validar y defender el código y los resultados.
+12. Propiedad intelectual: deberán respetarse las licencias de herramientas, bibliotecas, modelos y recursos del videojuego. No se distribuirán archivos del juego sin autorización.
+13. Evaluación académica: superar al agente docente no será requisito para obtener una calificación determinada.
+
+Ultimo mensaje de la ultima IA
+
+Falta poco para cerrar el repositorio, pero el reporte en PDF y la demo no están empezados, y son lo más grande que queda. Primero lo que verifiqué.
+
+Lo que encontré
+
+Repositorio (nuevo zip):
+
+Ya están README.md (igual al último que te di), models/final/ (el .pt, el modelo de SB3 y MODEL_CARD.md), scripts/play.py y requirements-play.txt.
+El sha256 del .pt empieza con 9c89fcdad5c9e7bd, el mismo de las pruebas de portabilidad. El zip de SB3 está íntegro y todo el código compila.
+Falta la carpeta notebooks/, que el README cita, y los 5 scripts siguen con cd ~/mario-ai, así que fallarían en el clon de otra persona.
+
+Notebook (notebook_mario_AI.ipynb):
+
+Lo ejecutaste en Colab y las 17 celdas de código tienen salida guardada, sin ningún error, con cifras que coinciden con las del repositorio. Colab usó Python 3.13.18, pandas 2.2.3 y numpy 2.4.6, así que ya pasó por una tercera versión de pandas.
+Hay dos celdas de código distintas de mi última versión: la 4 (solo un comentario tuyo) y la 11, donde usaste mi versión anterior sin el filtro de zonas.
+Veo cuatro retoques que conviene hacer (abajo).
+
+Una señal que conviene confirmar: en Colab, la celda 0 clonó el repositorio sin credenciales (/content/mario-ai-ppo). Eso solo ocurre si el repositorio es público. Es una deducción mía: ábrelo en una ventana de incógnito para comprobarlo. Si ya es público, lo del historial de commits deja de ser opcional.
+
+Retoques al notebook
+
+Haz estos cambios directamente en Colab y vuelve a ejecutar la celda 11:
+
+Texto 4: tu edición borró el punto 5 (la interrupción por Windows Update) y dejó un «1.3 ,». Esa interrupción explica las filas duplicadas de cfg1, así que conviene conservarla. Cambia «pasado 1.3 ,ahi» por «pasado 1.3 M, ahí» y añade:
+
+5. Interrupción. Dos reinicios planeados de Windows Update (02:29 y 02:36, según el registro de eventos) mataron mi cola de entrenamiento cuando cfg1 iba en 2 603 008 pasos. La reanudé desde el checkpoint de 2 600 000, así que mis CSV de cfg1 tienen filas duplicadas en ese tramo (≈ 3 000 pasos).
+
+Textos 1 y 15: reemplazaste «supuestos míos hasta recibir el anexo técnico» por «elecciones mías», y quitaste «supuesto» al límite de 8000. El límite de fotogramas, los intentos, la normalización y el formato de observación no son decisiones tuyas: los define el anexo del profesor, y tu README los llama provisionales. Si el anexo dice otra cosa, el notebook se contradiría. Vuelve a «supuestos provisionales míos hasta recibir el anexo técnico del docente».
+Celda de código 11: sustituye estas dos líneas
+python
+    ax.bar(t["zona"], t["q_muerte"] * 100, width=90)
+    ax.set(title=f"{title}: P(morir en la zona | llego a ella), %", ylabel="%")
+
+por estas tres. Evitan las barras del 100 % en zonas donde llegó un solo episodio:
+
+python
+    tp = t[t["llegan"] >= 30]   # solo zonas con muestra suficiente (>= 30 episodios)
+    ax.bar(tp["zona"], tp["q_muerte"] * 100, width=90)
+    ax.set(title=f"{title}: P(morir en la zona | llego a ella), %  (zonas con >= 30 episodios)", ylabel="%")
+Texto 7, en «Lo que veo», tras «su política deja de explorar.»:
+
+El colapso de rendimiento de cfg1 (hacia 3.2 M de pasos) coincide con una caída brusca de su entropía, de ≈ 0.1 a ≈ 10⁻⁵ nats: es consistente con una política que dejó de explorar, aunque no prueba la causa.
+
+Después, en Colab: Archivo → Descargar → .ipynb (se descarga con las salidas) y sustituye el que subiste.
+
+Arreglos del repositorio
+bash
+cd ~/mario-ai && source .venv/bin/activate
+sed -i 's|cd ~/mario-ai|cd "$(dirname "${BASH_SOURCE[0]}")/.."|' scripts/*.sh
+grep -n "^cd " scripts/*.sh
+mkdir -p notebooks
+cp /mnt/c/Users/theke/Downloads/notebook_mario_AI.ipynb notebooks/
+sed -i 's|notebooks/notebook_mario.ipynb|notebooks/notebook_mario_AI.ipynb|g' README.md
+sed -i 's|\*\*Estudiante:\*\* Kenauh (trabajo individual)|**Estudiante:** Jonathan Alberto Salinas Sanchez (usuario de GitHub: Kenauh), trabajo individual|' README.md
+grep -n "notebook_mario\|Estudiante" README.md
+git log --all --diff-filter=A --name-only --pretty=format: | grep -i -E "\.nes$|\.rom$" | sort -u; echo "--- (vacio = nunca se subio una ROM)"
+git status --short
+
+Los cd deben quedar como cd "$(dirname "${BASH_SOURCE[0]}")/.." && source .... El comando de la ROM debe imprimir solo la línea de ayuda, sin nombres de archivo. Pégame ese resultado antes del commit: si apareciera una ROM, hay que limpiar el historial antes de que el repositorio siga público. El sed del nombre es opcional, pero deja el README coherente con el notebook. Cuando todo esté bien:
+
+bash
+git add README.md notebooks scripts/*.sh
+git commit -m "Entrega: notebook ejecutado en Colab, scripts sin rutas fijas y README actualizado"
+git push
+Qué falta, en orden de importancia
+Entregable	Estado
+Repositorio GitHub	casi listo (lo de arriba)
+Notebook	ejecutado y probado en Colab; faltan los 4 retoques
+Agente ejecutable	listo; el adaptador al evaluador espera el anexo
+Reporte PDF (máx. 10 cuartillas)	no empezado
+Demo en vivo	sin preparar
+Anexo técnico del profesor	sin respuesta que yo sepa
+Reporte técnico (Fase 10). Sigue las 10 secciones que pide el proyecto. Tú me cuentas con tus palabras, una pregunta a la vez por subtema, y yo organizo, corrijo y señalo huecos o errores conceptuales, con las cifras de tus resultados reales. Ya tenemos el documento de estudio como base de datos, y una cuartilla suele ser ≈ 250 a 300 palabras, así que serían unas 2500 a 3000 palabras más figuras. Conviene confirmar con el profesor qué entiende por cuartilla.
+Demo en vivo (Fase 11). Guion corto, preguntas probables del profesor, lista de verificación y un plan B (video grabado más notebook) si el emulador falla. La laptop con WSL2 ya sirve para jugar en vivo, pero falta saber dónde y cómo será la demo.
+Anexo del profesor. Si no ha llegado, manda un recordatorio con las dos preguntas del entorno de evaluación y el formato de entrega, y añade dónde será la demo y cuántas palabras es una cuartilla.
+
+Opcionales, que no bloquean nada: reset(seed) del agente (solo importa si el anexo pide varios intentos), un LICENSE, y la línea Resultado: de play.py en tu PC y en la laptop.
+
+✅ Hecho: revisión del repositorio y del notebook ejecutado en Colab (17 de 17 celdas sin errores), modelo final verificado, y lista de lo que falta.
+➡️ Siguiente fase: Fase 10, reporte técnico con tus palabras (después de los retoques y del commit).
+❓ ¿Continúo? Pega la salida del bloque de arreglos (sobre todo el comando de la ROM) y dime si empezamos la Fase 10 con la introducción.
+
+textos 1 y 15 , el profesor me dio la confirmacion que ya no va haber un anexo tecnico y que los parametros y decisiones de diseño que hicimos estaban muy bien y basta con que corra en mi laptop, madnare videos de como corre de manera autonoma en mi laptop y como se genera el video de como se pasa el nivel.
+
+Ya corregi otros textos del notebook
+(.venv) kenau@Kenauh:~/mario-ai$ cd ~/mario-ai && source .venv/bin/activate
+sed -i 's|cd ~/mario-ai|cd "$(dirname "${BASH_SOURCE[0]}")/.."|' scripts/*.sh
+grep -n "^cd " scripts/*.sh
+mkdir -p notebooks
+cp /mnt/c/Users/theke/Downloads/notebook_mario_AI.ipynb notebooks/
+sed -i 's|notebooks/notebook_mario.ipynb|notebooks/notebook_mario_AI.ipynb|g' README.md
+sed -i 's|\*\*Estudiante:\*\* Kenauh (trabajo individual)|**Estudiante:** Jonathan Alberto Salinas Sanchez (usuario de GitHub: Kenauh), trabajo individual|' README.md
+grep -n "notebook_mario\|Estudiante" README.md
+git log --all --diff-filter=A --name-only --pretty=format: | grep -i -E "\.nes$|\.rom$" | sort -u; echo "--- (vacio = nunca se subio una ROM)"
+git status --short
+scripts/run_eval.sh:4:cd "$(dirname "${BASH_SOURCE[0]}")/.." && source .venv/bin/activate
+scripts/run_queue.sh:6:cd "$(dirname "${BASH_SOURCE[0]}")/.." && source .venv/bin/activate
+scripts/run_queue_resume.sh:5:cd "$(dirname "${BASH_SOURCE[0]}")/.." && source .venv/bin/activate
+scripts/run_select.sh:4:cd "$(dirname "${BASH_SOURCE[0]}")/.." && source .venv/bin/activate
+scripts/state_report.sh:3:cd "$(dirname "${BASH_SOURCE[0]}")/.." && source .venv/bin/activate
+cp: cannot stat '/mnt/c/Users/theke/Downloads/notebook_mario_AI.ipynb': No such file or directory
+5:- **Estudiante:** Jonathan Alberto Salinas Sanchez (usuario de GitHub: Kenauh), trabajo individual
+29:El agente portable coincide exactamente con SB3 (bandera, x máxima y fotogramas) en 62 episodios deterministas, y produce las mismas acciones en tres entornos (WSL, Windows y Colab). El detalle, el análisis de errores y la selección del checkpoint están en notebooks/notebook_mario_AI.ipynb.
+44:├── notebooks/notebook_mario_AI.ipynb
+162:notebooks/notebook_mario_AI.ipynb documenta las nueve partes pedidas (representación, estrategia, configuración inicial, entrenamiento, segunda configuración, resultados, comparación, análisis de errores y selección del agente final). Lee los CSV de results/, no vuelve a entrenar, y funciona en local y en Colab. Las celdas que necesitan el emulador (entrenamiento corto y jugar un episodio) están protegidas con una bandera y mensajes de ayuda.
+--- (vacio = nunca se subio una ROM)
+M README.md
+M scripts/make_fixture.py
+M scripts/run_eval.sh
+M scripts/run_queue.sh
+M scripts/run_queue_resume.sh
+M scripts/run_select.sh
+M scripts/state_report.sh
+?? scripts/replay_video.py
+(.venv) kenau@Kenauh:~/mario-ai$
+El repositorio lo podemos continuar editando desde algun IDE como VSC?, como?
+Pasame donde puedo ver el agente ejecutable y si puedes ponlo en una carpeta propia en el repositorio para tenerlo de mejor acceso
+Empieza con una version del reporte pdf la cual pueda leer comprender cada punto que se necesita y asi ir dandote punto por punto con mis palabras
+hay que eliminar todo lo que no sea necesario del repositorio para que se vea lo mas limpio que se pueda ademas de separar bien todo en sus carpetas con sus nombre de que es cada cosa
+Para la demo, hay que ir viendo el guion que seguire para mostrar como funciona mi AI de manera autonoma , y explicar lo que pide en profesor (Durante la presentación se verificará:
+Inicialización correcta del agente.
+Ejecución autónoma.
+Selección de acciones mediante la estrategia implementada.
+Registro de progreso.
+Integración con el evaluador.
+Resultados de desempeño.
+Explicación de decisiones técnicas.)
+
+Aqui solo quiero que continues con lo que sea codigo y cosas de github , lo que tenga que hacer en la PC solo dime que hacer, no lo hagas directamente 
