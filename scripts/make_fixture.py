@@ -18,17 +18,18 @@ env = LegacyNESToGymnasium()
 agent = MarioAgent(str(model), device="cpu", deterministic=True, seed=0)
 obs, _ = env.reset(seed=0)
 agent.reset()
-frames, acts = [], []
+frames, acts, xs = [], [], []
 for _ in range(N):
     a = agent.act(obs)
     frames.append(obs.copy())
     acts.append(a)
     obs, _, done, _, info = env.step(a)
+    xs.append(int(info.get("x_pos", 0)))
     if done:
         break
 env.close()
 agent.close()
 out.parent.mkdir(parents=True, exist_ok=True)
 sha = hashlib.sha256(model.read_bytes()).hexdigest()
-np.savez_compressed(out, frames=np.stack(frames), actions=np.array(acts, dtype=np.int16), model_sha256=sha)
+np.savez_compressed(out, frames=np.stack(frames), actions=np.array(acts, dtype=np.int16), x=np.array(xs), model_sha256=sha)
 print(len(frames), "fotogramas ->", out, f"{out.stat().st_size / 1e6:.1f} MB | sha256 del modelo:", sha[:16])

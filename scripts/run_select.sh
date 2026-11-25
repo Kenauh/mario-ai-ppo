@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Seleccion de checkpoint de cfg2: P2 estocastico, semillas 0 a 99 (conjunto de seleccion).
 set -o pipefail
-cd ~/mario-ai && source .venv/bin/activate
+cd "$(dirname "${BASH_SOURCE[0]}")/.." && source .venv/bin/activate
 export OMP_NUM_THREADS=1
 f() { grep -v -i "warn" | grep -v -E "Gym has|Please upgrade|Users of|migration guide"; }
 for s in 3000 4000 4500; do

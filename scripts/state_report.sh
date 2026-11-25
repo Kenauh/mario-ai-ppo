@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Reporte compacto de estado. Uso: bash scripts/state_report.sh > ~/state_report.txt 2>&1
-cd ~/mario-ai && source .venv/bin/activate
+cd "$(dirname "${BASH_SOURCE[0]}")/.." && source .venv/bin/activate
 echo "## FECHA"; date
 echo "## GIT"; git status --short | head -15; git log --oneline | head -4
 git fetch -q 2>&1 | head -2; git status -sb | head -1

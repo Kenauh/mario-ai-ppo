@@ -2,7 +2,7 @@
 
 Proyecto Final 3 de Inteligencia Artificial. Un agente entrenado con **PPO** (Stable-Baselines3) que juega el Mundo 1-1 viendo solo píxeles. El agente final se ejecuta **sin SB3, Gymnasium ni NES-Py**: solo con PyTorch, NumPy y OpenCV.
 
-- **Estudiante:** Kenauh (trabajo individual)
+- **Estudiante:** Jonathan Alberto Salinas Sanchez (usuario de GitHub: Kenauh), trabajo individual
 - **Estado:** trabajo experimental terminado; pendiente el anexo técnico del docente (interfaz del evaluador, límite de fotogramas, formato de entrega). Los parámetros del evaluador que se usan aquí son **supuestos provisionales** (ver [Limitaciones](#limitaciones-y-pendientes)).
 
 ## Resultados principales
@@ -26,7 +26,7 @@ Todas las cifras salen de ejecuciones reales; los CSV están en `results/`. Una 
 | Determinista, 31 retrasos iniciales (0 a 120 fotogramas) | 31 de 31 (89.0 a 100 %) |
 | Determinista, inicio estándar | bandera en 1080 fotogramas |
 
-El agente portable coincide exactamente con SB3 (bandera, x máxima y fotogramas) en 62 episodios deterministas, y produce las mismas acciones en tres entornos (WSL, Windows y Colab). El detalle, el análisis de errores y la selección del checkpoint están en `notebooks/notebook_mario.ipynb`.
+El agente portable coincide exactamente con SB3 (bandera, x máxima y fotogramas) en 62 episodios deterministas, y produce las mismas acciones en tres entornos (WSL, Windows y Colab). El detalle, el análisis de errores y la selección del checkpoint están en `notebooks/notebook_mario_AI.ipynb`.
 
 ## Estructura del repositorio
 
@@ -41,7 +41,7 @@ El agente portable coincide exactamente con SB3 (bandera, x máxima y fotogramas
 │   ├── agent.py  policy.py  preprocess.py  actions.py     agente portable (torch, numpy, opencv)
 │   └── wrappers.py  env_factory.py  callbacks.py  export.py   entrenamiento (necesitan gym y SB3)
 ├── scripts/                    entrenamiento, evaluación, videos, diagnósticos y pruebas de portabilidad
-├── notebooks/notebook_mario.ipynb
+├── notebooks/notebook_mario_AI.ipynb
 ├── models/final/               agente final: policy_3800896.pt (exportado) y su modelo original de SB3
 └── results/                    CSV de las corridas, evaluaciones y línea base aleatoria
 ```
@@ -159,7 +159,7 @@ python scripts/markov_zones.py results/cfg2_reward_scale_5M/episodes.csv --since
 
 ## Notebook
 
-`notebooks/notebook_mario.ipynb` documenta las nueve partes pedidas (representación, estrategia, configuración inicial, entrenamiento, segunda configuración, resultados, comparación, análisis de errores y selección del agente final). Lee los CSV de `results/`, no vuelve a entrenar, y funciona en local y en Colab. Las celdas que necesitan el emulador (entrenamiento corto y jugar un episodio) están protegidas con una bandera y mensajes de ayuda.
+`notebooks/notebook_mario_AI.ipynb` documenta las nueve partes pedidas (representación, estrategia, configuración inicial, entrenamiento, segunda configuración, resultados, comparación, análisis de errores y selección del agente final). Lee los CSV de `results/`, no vuelve a entrenar, y funciona en local y en Colab. Las celdas que necesitan el emulador (entrenamiento corto y jugar un episodio) están protegidas con una bandera y mensajes de ayuda.
 
 ## Recursos utilizados
 

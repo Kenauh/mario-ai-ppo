@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Fase 7: evaluacion estandarizada de 4 checkpoints (2M y 5M de cfg1 y cfg2), protocolos P1 y P2.
 set -o pipefail
-cd ~/mario-ai && source .venv/bin/activate
+cd "$(dirname "${BASH_SOURCE[0]}")/.." && source .venv/bin/activate
 export OMP_NUM_THREADS=1
 mkdir -p results/eval
 run() { python -u scripts/eval_standard.py --ckpt "$1" --label "$2" --mode "$3" --episodes "$4" --noop-max "$5" --out "results/eval/$2_$3_n$5.csv" 2>&1 | grep -v -i "warn" | grep -v -E "Gym has|Please upgrade|Users of|migration guide"; }
