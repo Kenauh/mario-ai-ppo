@@ -1,0 +1,9 @@
+# Para JUGAR en vivo con el emulador (scripts/play.py). Probado con Python 3.10 en Linux/WSL.
+# numpy<2 es obligatorio por nes-py. torch (CPU) se instala aparte:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+numpy==1.26.4
+opencv-python-headless==4.11.0.86
+gym==0.26.2
+gymnasium==1.4.0
+nes-py==8.2.1
+gym-super-mario-bros==7.4.0
